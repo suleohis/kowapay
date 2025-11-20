@@ -1,0 +1,12 @@
+{
+  "@@locale": "ig",
+  "appName": "MyFintech",
+  "welcome": "Ndewo",
+  "balance": "Ego dị",
+  "loginBiometric": "Banye site na mkpisiaka aka / ihu",
+  "transfer": "Ziga ego",
+  "amount": "Ọnụ ego",
+  "logout": "Pụọ",
+  "kycPending": "Mecha KYC gị iji gaa n'ihu",
+  "currency": "₦{amount}"
+}

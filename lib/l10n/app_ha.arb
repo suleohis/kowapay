@@ -1,0 +1,12 @@
+{
+  "@@locale": "ha",
+  "appName": "MyFintech",
+  "welcome": "Barka da zuwa",
+  "balance": "Kuɗi mai samuwa",
+  "loginBiometric": "Shiga da yatsa / fuska",
+  "transfer": "Canja wuri",
+  "amount": "Adadin",
+  "logout": "Fita",
+  "kycPending": "Kammala KYC don ci gaba",
+  "currency": "₦{amount}"
+}

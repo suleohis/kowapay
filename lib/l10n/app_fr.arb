@@ -1,0 +1,12 @@
+{
+  "@@locale": "fr",
+  "appName": "MyFintech",
+  "welcome": "Bienvenue",
+  "balance": "Solde disponible",
+  "loginBiometric": "Connexion par empreinte/faciale",
+  "transfer": "Transférer",
+  "amount": "Montant",
+  "logout": "Déconnexion",
+  "kycPending": "Terminez votre KYC pour continuer",
+  "currency": "{amount} FCFA"
+}

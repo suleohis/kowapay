@@ -1,0 +1,12 @@
+{
+  "@@locale": "yo",
+  "appName": "MyFintech",
+  "welcome": "Ẹ káàbọ̀",
+  "balance": "Ìsanwó tó ṣẹ́wà",
+  "loginBiometric": "Wọlé pẹ̀lú ìtọ́ka ẹ̀ka / ojú",
+  "transfer": "Gbé owó lọ",
+  "amount": "Iye owó",
+  "logout": "Jáde",
+  "kycPending": "Pari KYC rẹ lati tẹsiwaju",
+  "currency": "₦{amount}"
+}

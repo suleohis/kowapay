@@ -1,0 +1,18 @@
+{
+  "@@locale": "en",
+  "appName": "MyFintech",
+  "welcome": "Welcome back",
+  "balance": "Available Balance",
+  "loginBiometric": "Login with Fingerprint/Face ID",
+  "transfer": "Transfer",
+  "amount": "Amount",
+  "logout": "Logout",
+  "kycPending": "Complete your KYC to continue",
+  "currency": "₦{amount}",
+  "@currency": {
+    "description": "Currency format",
+    "placeholders": {
+      "amount": {}
+    }
+  }
+}
