@@ -15,5 +15,15 @@
     "placeholders": {
       "amount": {}
     }
-  }
+  },
+  "onboarding_title_1": "Instant Payments,\nAnytime.",
+  "onboarding_subtitle_1": "Fast, reliable, and built for everyday life.",
+  "onboarding_title_2": "Save Together,\nGrow Together.",
+  "onboarding_subtitle_2": "Join trusted Ajo circles to contribute and save",
+  "onboarding_title_3": "Safe. Secure.\nTrusted.",
+  "onboarding_subtitle_3": "Built with your peace of mind in mind",
+  "onboarding_title_4": "More Than a\nWallet.",
+  "onboarding_subtitle_4": "Send, save, and grow your money",
+  "skip": "Skip",
+  "get_started": "Get Started"
 }

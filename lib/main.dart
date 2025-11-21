@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kowapay/routes/app_router.dart';
 import 'core/di/initialize_providers.dart';
@@ -29,19 +28,8 @@ class MyFintechApp extends ConsumerWidget {
       child: MaterialApp.router(
         routerConfig: ref.watch(routerProvider),
         debugShowCheckedModeBanner: false,
-        localizationsDelegates: const [
-          S.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: const [
-          Locale('en'),
-          Locale('fr'),
-          Locale('ig'),
-          Locale('ha'),
-          Locale('yo'),
-        ],
+        localizationsDelegates: S.localizationsDelegates,
+        supportedLocales: S.supportedLocales,
         locale: const Locale('en'), // TODO: make dynamic from user settings
         builder: (context, widget) {
           return ResponsiveScaledBox(

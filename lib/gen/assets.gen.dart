@@ -27,11 +27,23 @@ class $AssetsBrandingGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/onboarding_0.png
+  AssetGenImage get onboarding0 => const AssetGenImage('assets/images/onboarding_0.png');
+
+  /// File path: assets/images/onboarding_1.png
+  AssetGenImage get onboarding1 => const AssetGenImage('assets/images/onboarding_1.png');
+
+  /// File path: assets/images/onboarding_2.png
+  AssetGenImage get onboarding2 => const AssetGenImage('assets/images/onboarding_2.png');
+
+  /// File path: assets/images/onboarding_3.png
+  AssetGenImage get onboarding3 => const AssetGenImage('assets/images/onboarding_3.png');
+
   /// File path: assets/images/splash_bg.png
   AssetGenImage get splashBg => const AssetGenImage('assets/images/splash_bg.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [splashBg];
+  List<AssetGenImage> get values => [onboarding0, onboarding1, onboarding2, onboarding3, splashBg];
 }
 
 class Assets {

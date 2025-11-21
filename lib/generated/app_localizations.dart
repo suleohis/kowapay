@@ -162,6 +162,66 @@ abstract class S {
   /// In en, this message translates to:
   /// **'₦{amount}'**
   String currency(Object amount);
+
+  /// No description provided for @onboarding_title_1.
+  ///
+  /// In en, this message translates to:
+  /// **'Instant Payments,\nAnytime.'**
+  String get onboarding_title_1;
+
+  /// No description provided for @onboarding_subtitle_1.
+  ///
+  /// In en, this message translates to:
+  /// **'Fast, reliable, and built for everyday life.'**
+  String get onboarding_subtitle_1;
+
+  /// No description provided for @onboarding_title_2.
+  ///
+  /// In en, this message translates to:
+  /// **'Save Together,\nGrow Together.'**
+  String get onboarding_title_2;
+
+  /// No description provided for @onboarding_subtitle_2.
+  ///
+  /// In en, this message translates to:
+  /// **'Join trusted Ajo circles to contribute and save'**
+  String get onboarding_subtitle_2;
+
+  /// No description provided for @onboarding_title_3.
+  ///
+  /// In en, this message translates to:
+  /// **'Safe. Secure.\nTrusted.'**
+  String get onboarding_title_3;
+
+  /// No description provided for @onboarding_subtitle_3.
+  ///
+  /// In en, this message translates to:
+  /// **'Built with your peace of mind in mind'**
+  String get onboarding_subtitle_3;
+
+  /// No description provided for @onboarding_title_4.
+  ///
+  /// In en, this message translates to:
+  /// **'More Than a\nWallet.'**
+  String get onboarding_title_4;
+
+  /// No description provided for @onboarding_subtitle_4.
+  ///
+  /// In en, this message translates to:
+  /// **'Send, save, and grow your money'**
+  String get onboarding_subtitle_4;
+
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// No description provided for @get_started.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Started'**
+  String get get_started;
 }
 
 class _SDelegate extends LocalizationsDelegate<S> {

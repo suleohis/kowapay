@@ -45,7 +45,12 @@ class AppTextStyles {
   );
 
   static TextStyle body(BuildContext context) => _body.copyWith(
-    fontSize: _scale(context, mobile: 15, tablet: 16, desktop: 17),
+    fontSize: _scale(context, mobile: 14, tablet: 16, desktop: 17),
+    color: AppColors.textPrimary,
+  );
+
+  static TextStyle bodyMedium(BuildContext context) => _bodyMedium.copyWith(
+    fontSize: _scale(context, mobile: 14, tablet: 16, desktop: 17),
     color: AppColors.textPrimary,
   );
 

@@ -1,27 +1,26 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:kowapay/features/onboarding/presentation/pages/onboarding_screen.dart';
 
-import '../features/auth/presentation/providers/auth_provider.dart';
 import '../features/auth/presentation/screens/login_screen.dart';
 import '../features/auth/presentation/screens/splash_screen.dart';
 
-final routerProvider = Provider<GoRouter>((ref) {
-  final auth = ref.watch(authProvider);
+class AppRouter {
+  static const String splash = '/splash';
+  static const String onboarding = '/onboarding';
+  static const String login = '/login';
+  static const String dashboard = '/dashboard';
+}
+
+final Provider<GoRouter> routerProvider = Provider<GoRouter>((ref) {
 
   return GoRouter(
-    initialLocation: '/splash',
-    redirect: (context, state) {
-      final loggedIn = auth.isLoggedIn;
-      final goingToLogin = state.matchedLocation == '/login' || state.matchedLocation == '/splash';
-
-      if (!loggedIn && !goingToLogin) return '/login';
-      if (loggedIn && goingToLogin) return '/dashboard';
-      return null;
-    },
+    initialLocation: AppRouter.splash,
     routes: [
-      GoRoute(path: '/splash', builder: (_, __) => const SplashScreen()),
-      GoRoute(path: '/login', builder: (_, __) => const LoginScreen()),
-      GoRoute(path: '/dashboard', builder: (_, __) => const DashboardScreen()),
+      GoRoute(path: AppRouter.splash, builder: (_, __) => const SplashScreen()),
+      GoRoute(path: AppRouter.onboarding, builder: (_, __) => const OnboardingScreen()),
+      GoRoute(path: AppRouter.login, builder: (_, __) => const LoginScreen()),
+      GoRoute(path: AppRouter.dashboard, builder: (_, __) => const DashboardScreen()),
     ],
   );
 });

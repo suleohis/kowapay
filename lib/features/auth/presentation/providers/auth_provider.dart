@@ -6,17 +6,22 @@ import '../../domain/usecases/login_with_biometrics.dart';
 import '../../domain/entities/user_entity.dart';
 
 // 1. Data sources
-final localAuthProvider = Provider<LocalAuthentication>((ref) => LocalAuthentication());
-final authLocalDataSourceProvider = Provider((ref) =>
-    AuthLocalDataSource(ref.read(localAuthProvider)));
+final localAuthProvider = Provider<LocalAuthentication>(
+  (ref) => LocalAuthentication(),
+);
+final authLocalDataSourceProvider = Provider(
+  (ref) => AuthLocalDataSource(ref.read(localAuthProvider)),
+);
 
 // 2. Repository
-final authRepositoryProvider = Provider((ref) =>
-    AuthRepositoryImpl(ref.read(authLocalDataSourceProvider)));
+final authRepositoryProvider = Provider(
+  (ref) => AuthRepositoryImpl(ref.read(authLocalDataSourceProvider)),
+);
 
 // 3. Use cases
-final loginWithBiometricsProvider = Provider((ref) =>
-    LoginWithBiometrics(ref.read(authRepositoryProvider)));
+final loginWithBiometricsProvider = Provider(
+  (ref) => LoginWithBiometrics(ref.read(authRepositoryProvider)),
+);
 
 // 4. UI State
 class AuthState {
@@ -25,7 +30,12 @@ class AuthState {
   final String? error;
   final bool isLoggedIn;
 
-  const AuthState({this.isLoading = false, this.user, this.error, this.isLoggedIn = false});
+  const AuthState({
+    this.isLoading = false,
+    this.user,
+    this.error,
+    this.isLoggedIn = false,
+  });
 }
 
 // 5. Notifier
@@ -39,13 +49,10 @@ class AuthNotifier extends StateNotifier<AuthState> {
     try {
       final usecase = ref.read(loginWithBiometricsProvider);
       final user = await usecase();
-      if (user == null) throw 'Authentication failed';
-      state = AuthState(user: user);
+      state = AuthState(user: user, isLoggedIn: user != null);
     } catch (e) {
       state = AuthState(error: e.toString());
     }
-    print('loginWithBiometrics');
-    print(state);
   }
 
   Future<void> logout() async {

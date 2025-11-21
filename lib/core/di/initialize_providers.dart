@@ -1,8 +1,5 @@
-// lib/core/di/initialize_providers.dart
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../features/auth/presentation/providers/auth_provider.dart';
-import '../../features/auth/data/datasources/auth_local_datasource.dart';
-import 'package:local_auth/local_auth.dart';
 
 /// Call this ONCE in main() — guarantees everything is ready
 Future<void> initializeProviders(ProviderContainer container) async {
