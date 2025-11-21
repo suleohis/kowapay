@@ -1,6 +1,7 @@
 {
   "@@locale": "en",
-  "appName": "MyFintech",
+  "appName": "KowaPay",
+  "splashNote": "Save. Spend. Grow",
   "welcome": "Welcome back",
   "balance": "Available Balance",
   "loginBiometric": "Login with Fingerprint/Face ID",

@@ -44,6 +44,8 @@ class AuthNotifier extends StateNotifier<AuthState> {
     } catch (e) {
       state = AuthState(error: e.toString());
     }
+    print('loginWithBiometrics');
+    print(state);
   }
 
   Future<void> logout() async {

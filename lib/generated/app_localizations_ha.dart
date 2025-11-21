@@ -5,11 +5,14 @@ import 'app_localizations.dart';
 // ignore_for_file: type=lint
 
 /// The translations for Hausa (`ha`).
-class AppLocalizationsHa extends AppLocalizations {
-  AppLocalizationsHa([String locale = 'ha']) : super(locale);
+class SHa extends S {
+  SHa([String locale = 'ha']) : super(locale);
 
   @override
-  String get appName => 'MyFintech';
+  String get appName => 'KowaPay';
+
+  @override
+  String get splashNote => 'Save. Spend. Grow';
 
   @override
   String get welcome => 'Barka da zuwa';

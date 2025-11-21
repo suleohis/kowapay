@@ -5,11 +5,14 @@ import 'app_localizations.dart';
 // ignore_for_file: type=lint
 
 /// The translations for French (`fr`).
-class AppLocalizationsFr extends AppLocalizations {
-  AppLocalizationsFr([String locale = 'fr']) : super(locale);
+class SFr extends S {
+  SFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get appName => 'MyFintech';
+  String get appName => 'KowaPay';
+
+  @override
+  String get splashNote => 'Save. Spend. Grow';
 
   @override
   String get welcome => 'Bienvenue';

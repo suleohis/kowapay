@@ -1,27 +1,11 @@
 // splash_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kowapay/core/extensions.dart';
 
 import '../providers/auth_provider.dart';
-
-class SplashScreen extends ConsumerWidget {
-  const SplashScreen({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    ref.listen(authProvider, (previous, next) {
-      if (next.user != null) context.go('/dashboard');
-      else if (!next.isLoading && next.user == null) context.go('/login');
-    });
-
-    // Auto attempt biometric
-    Future.microtask(() => ref.read(authProvider.notifier).loginWithBiometrics());
-
-    return const Scaffold(body: Center(child: CircularProgressIndicator()));
-  }
-}
 
 // login_screen.dart
 class LoginScreen extends ConsumerWidget {
@@ -36,7 +20,7 @@ class LoginScreen extends ConsumerWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-             Text('Welcome Back', style: TextStyle(fontSize: 32.xxl)),
+             Text('Welcome Back', style: TextStyle(fontSize: 32.sp)),
             SizedBox(height: 40.h),
             ElevatedButton(
               onPressed: state.isLoading ? null : () => ref.read(authProvider.notifier).loginWithBiometrics(),
@@ -44,8 +28,8 @@ class LoginScreen extends ConsumerWidget {
             ),
             if (state.error != null)
               Padding(
-                padding: EdgeInsets.only(top: 16.l),
-                child: Text(state.error!, style: TextStyle(color: Colors.red, fontSize: 14.m)),
+                padding: EdgeInsets.only(top: 16.h),
+                child: Text(state.error!, style: TextStyle(color: Colors.red, fontSize: 14.sp)),
               ),
           ],
         ),
@@ -68,9 +52,9 @@ class DashboardScreen extends ConsumerWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('Hello, ${user.fullName}', style: TextStyle(fontSize: 24.xl)),
+            Text('Hello, ${user.fullName}', style: TextStyle(fontSize: 24.sp)),
             SizedBox(height: 20.h),
-            Text('₦1,250,000.00', style: TextStyle(fontSize: 48.huge)),
+            Text('₦1,250,000.00', style: TextStyle(fontSize: 48.sp)),
             SizedBox(height: 40.h),
             ElevatedButton(
               onPressed: () => ref.read(authProvider.notifier).logout().then((_) => context.go('/login')),

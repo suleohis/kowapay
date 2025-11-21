@@ -5,11 +5,14 @@ import 'app_localizations.dart';
 // ignore_for_file: type=lint
 
 /// The translations for Yoruba (`yo`).
-class AppLocalizationsYo extends AppLocalizations {
-  AppLocalizationsYo([String locale = 'yo']) : super(locale);
+class SYo extends S {
+  SYo([String locale = 'yo']) : super(locale);
 
   @override
-  String get appName => 'MyFintech';
+  String get appName => 'KowaPay';
+
+  @override
+  String get splashNote => 'Save. Spend. Grow';
 
   @override
   String get welcome => 'Ẹ káàbọ̀';

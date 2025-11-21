@@ -5,11 +5,14 @@ import 'app_localizations.dart';
 // ignore_for_file: type=lint
 
 /// The translations for Igbo (`ig`).
-class AppLocalizationsIg extends AppLocalizations {
-  AppLocalizationsIg([String locale = 'ig']) : super(locale);
+class SIg extends S {
+  SIg([String locale = 'ig']) : super(locale);
 
   @override
-  String get appName => 'MyFintech';
+  String get appName => 'KowaPay';
+
+  @override
+  String get splashNote => 'Save. Spend. Grow';
 
   @override
   String get welcome => 'Ndewo';
